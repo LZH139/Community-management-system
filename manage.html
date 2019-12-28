@@ -349,6 +349,7 @@
                             </div>
                         </div>
 
+
                         <div class="col-lg-4 col-md-12 col-12 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
@@ -366,7 +367,37 @@
                                                 <div class="media-body">
                                                     <div class="media-title">Farhan A Mujib</div>
                                                     <a data-collapse="#mycard-test" class="btn btn-primary btn-round btn-sm float-right"><i class="ion ion-minus"></i></a>
+
+                                                    <div class="form-group" style="margin-top: 50px;" class="collapse hidden" id="mycard-test">
+
+                                                        <input type="text" name="title" class="form-control" required>
+                                                        <div class="invalid-feedback">
+                                                            请输入内容！
+                                                        </div>
+
+                                                        <div class="btn-group float-right" style="margin-top: 8px">
+                                                            <button type="button" class="btn btn-primary btn-sm float-right">发送任务</button>
+                                                            <button type="button" class="btn btn-primary btn-sm float-right dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" onclick="choose(this)">任务</a>
+                                                                <a class="dropdown-item" onclick="choose(this)">通知</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
                                                 </div>
+
+
+
+
+
+
+
                                             </li>
                                             <li class="media">
                                                 <img class="mr-3 rounded-circle" width="50" src="../dist/img/avatar/avatar-2.jpeg" alt="avatar">
@@ -374,6 +405,12 @@
 
                                                     <div class="media-title">Ujang Maman</div>
                                                     <a data-collapse="#mycard-test" class="btn btn-primary btn-round btn-sm float-right"><i class="ion ion-minus"></i></a>
+                                                    <div class="collapse hidden" id="mycard-test">
+
+
+
+
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li class="media">
@@ -412,28 +449,49 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-lg-8"></div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="collapse hidden" id="mycard-test">
-                                <div class="card card-primary">
+                        <div class="col-12 col-sm-6 col-lg-6">
+                            <div class="card">
+                                <div class="card-header bg-danger">
+                                    <div class="float-right ">
+                                        <a data-collapse="#mycard-notice" class="btn btn-icon" style="color: white"><i class="ion ion-minus"></i></a>
+                                    </div>
+                                    <h4 style="color: white">任务</h4>
+                                </div>
+                                <div class="collapse show" id="mycard-notice">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label>内容</label>
-                                            <input type="text" name="title" class="form-control" required>
-                                            <div class="invalid-feedback">
-                                                请输入内容！
-                                            </div>
-                                            <div style="margin-top: 5px">
-                                                <button class="btn btn-primary btn-sm float-right">发送</button>
+                                            <label>要求</label>
+                                            <div>
+                                                <strong>XXXX</strong>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label>完成情况</label>
+                                            <textarea class="summernote-simple"></textarea>
+                                        </div>
                                     </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-primary">确认提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-6">
+                            <div class="card" id="mycard-dimiss">
+                                <div class="card-header bg-info">
+                                    <div class="float-right">
+                                        <a data-dismiss="#mycard-dimiss" class="btn btn-icon" style="color: white"><i class="ion ion-close"></i></a>
+                                    </div>
+                                    <h4 style="color: white">通知</h4>
+                                </div>
+                                <div class="card-body">
+                                    You can dimiss this card.
+                                </div>
+                                <div class="card-footer">
 
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-12 col-sm-12">
@@ -575,6 +633,10 @@
     <script src="./dist/modules/summernote/summernote-lite.js"></script>
 
     <script>
+        function choose(e) {
+            e.parentNode.parentNode.children[0].innerHTML = "发送" + e.innerHTML
+        }
+
         function tabCell() {
             var tab = document.getElementById('timetable')
             var rows = tab.rows;
@@ -643,4 +705,6 @@
     <script src="./dist/js/scripts.js"></script>
     <script src="./dist/js/custom.js"></script>
     <script src="./dist/js/demo.js"></script>
-</body></html>
+</body>
+
+</html>
