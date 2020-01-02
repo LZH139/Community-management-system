@@ -65,7 +65,7 @@
             </div>
             <ul class="sidebar-menu">
                 <li class="menu-header">工作台</li>
-                <li class="active">
+                <li class="">
                     <a href="manage.jsp"><i class="ion ion-speedometer"></i><span>工作台</span></a>
                 </li>
 

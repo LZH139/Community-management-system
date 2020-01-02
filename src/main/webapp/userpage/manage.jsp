@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="../dist/css/demo.css">
     <link rel="stylesheet" href="../dist/css/style.css">
+
 </head>
 
 <body>
@@ -277,7 +278,7 @@
                                                             <div class="collapse hidden" style="margin-top: 50px" id="mycard-test">
                                                                 <form method="post" action="/sendmessage">
                                                                     <input hidden value="0" name="id">
-                                                                    <input type="text" class="form-control" placeholder="请输入内容..." name="message">
+                                                                    <textarea type="text" class="form-control" placeholder="请输入内容..." name="message"></textarea>
 
                                                                     <div class="btn-group float-right" style="margin-top: 8px">
                                                                         <button type="button" class="btn btn-primary btn-sm float-right">发送通知</button>
