@@ -8,6 +8,8 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
     <title>工作台 &mdash; Stisla</title>
 
+
+
     <link rel="stylesheet" href="../dist/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
@@ -15,7 +17,13 @@
     <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
     <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="../dist/css/demo.css">
+
     <link rel="stylesheet" href="../dist/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
 
 </head>
 
@@ -249,7 +257,6 @@
                             </div>
                         </div>
 
-
                         <div class="col-lg-4 col-md-12 col-12 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
@@ -279,6 +286,14 @@
                                                                 <form method="post" action="/sendmessage">
                                                                     <input hidden value="0" name="id">
                                                                     <textarea type="text" class="form-control" placeholder="请输入内容..." name="message"></textarea>
+
+                                                                    <shiro:hasPermission name="sendTasks">
+                                                                        <div class="input-group-sm" style="display: none;margin-top: 3px" id="tasktime">
+                                                                            <input type="text" class="form-control input-sm" id="datepickerstart"  data-min-date=today style="background-color: white;width: 48%" placeholder="任务开始时间">
+                                                                            <div class="ion ion-minus" style="padding:8px 0px 8px 0px"></div>
+                                                                            <input type="text" class="form-control" id="datepickerend"  data-min-date=today style="background-color: white;width: 48%" placeholder="任务结束时间">
+                                                                        </div>
+                                                                    </shiro:hasPermission>
 
                                                                     <div class="btn-group float-right" style="margin-top: 8px">
                                                                         <button type="button" class="btn btn-primary btn-sm float-right">发送通知</button>
@@ -317,7 +332,6 @@
 
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12 col-sm-6 col-lg-6">
                             <div class="card">
@@ -382,76 +396,79 @@
     <script src="../dist/modules/chart.min.js"></script>
     <script src="../dist/modules/summernote/summernote-lite.js"></script>
 
+
     <script>
+        var tab = document.getElementById('timetable')
+        var rows = tab.rows;
+        var rlen = rows.length;
+        for (var i = 1; i < rlen; i++) {
+            var cells = rows[i].cells;
+            for (var j = 0; j < cells.length; j++) {
+                cells[j].onclick = function() {
+                    if (this.style.background == '') {
+                        this.style.background = "#28a745"
+                    } else {
+                        this.style.background = ''
+                    }
+                }
+
+            }
+        }
+
+
+        document.getElementById("datepickerstart").flatpickr();
+        document.getElementById("datepickerend").flatpickr();
+
+
         function choose(e) {
             e.parentNode.parentNode.children[0].innerHTML = "发送" + e.innerHTML;
             e.parentNode.parentNode.parentNode.children[0].value = e.id;
+            if(document.getElementById("tasktime").style.display == "none"){
+                document.getElementById("tasktime").style.display = "flex";
+            }else{
+                document.getElementById("tasktime").style.display = "none";
+            }
+
         }
 
-        function tabCell() {
-            var tab = document.getElementById('timetable')
-            var rows = tab.rows;
-            var rlen = rows.length;
-            for (var i = 1; i < rlen; i++) {
-                var cells = rows[i].cells;
-                for (var j = 0; j < cells.length; j++) {
-                    cells[j].onclick = function() {
-                        if (this.style.background == '') {
-                            this.style.background = "#28a745"
-                        } else {
-                            this.style.background = ''
-                        }
-                    }
-
-                }
-            }
-        }
-
-        tabCell()
 
 
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                datasets: [{
-                    label: 'Statistics',
-                    data: [460, 458, 330, 502, 430, 610, 488],
-                    borderWidth: 2,
-                    backgroundColor: '#0062cc',
-                    borderColor: '#0062cc',
-                    borderWidth: 2.5,
-                    pointBackgroundColor: '#ffffff',
-                    pointRadius: 4
-                }]
-            },
-            options: {
-                legend: {
-                    display: false
-                },
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            stepSize: 150
-                        }
-                    }],
-                    xAxes: [{
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                },
-            }
-        });
+        // var ctx = document.getElementById("myChart").getContext('2d');
+        // var myChart = new Chart(ctx, {
+        //     type: 'line',
+        //     data: {
+        //         labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        //         datasets: [{
+        //             label: 'Statistics',
+        //             data: [460, 458, 330, 502, 430, 610, 488],
+        //             borderWidth: 2,
+        //             backgroundColor: '#0062cc',
+        //             borderColor: '#0062cc',
+        //             borderWidth: 2.5,
+        //             pointBackgroundColor: '#ffffff',
+        //             pointRadius: 4
+        //         }]
+        //     },
+        //     options: {
+        //         legend: {
+        //             display: false
+        //         },
+        //         scales: {
+        //             yAxes: [{
+        //                 ticks: {
+        //                     beginAtZero: true,
+        //                     stepSize: 150
+        //                 }
+        //             }],
+        //             xAxes: [{
+        //                 gridLines: {
+        //                     display: false
+        //                 }
+        //             }]
+        //         },
+        //     }
+        // });
 
-        $(function() {
-            $('td').on('click', function() {
-
-                console.log(1)
-            })
-        })
     </script>
     <script src="../dist/js/scripts.js"></script>
     <script src="../dist/js/custom.js"></script>
