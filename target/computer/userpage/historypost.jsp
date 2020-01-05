@@ -19,6 +19,7 @@
 
 <body>
     <div id="app">
+        
         <jsp:include page="include.jsp"/>
             <div class="main-content">
                 <section class="section">

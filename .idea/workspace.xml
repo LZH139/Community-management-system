@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6caa48ec-7e69-41b2-95f6-5a7ae1667cb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/userpage/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userpage/include.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/userpage/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userpage/join.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/computer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/computer/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/computer/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/computer/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/computer/userpage/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/computer/userpage/include.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userpage/historypost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userpage/historypost.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +31,7 @@
           <entry key="css" value="7" />
           <entry key="java" value="6" />
           <entry key="js" value="4" />
-          <entry key="jsp" value="8" />
+          <entry key="jsp" value="10" />
           <entry key="styl" value="1" />
           <entry key="xml" value="2" />
         </counts>
@@ -47,7 +40,7 @@
         <counts>
           <entry key="CSS" value="7" />
           <entry key="JAVA" value="6" />
-          <entry key="JSP" value="8" />
+          <entry key="JSP" value="10" />
           <entry key="JavaScript" value="4" />
           <entry key="Stylus" value="1" />
           <entry key="XML" value="2" />
@@ -58,14 +51,14 @@
           <entry key="css" value="32" />
           <entry key="java" value="198" />
           <entry key="js" value="15" />
-          <entry key="jsp" value="878" />
+          <entry key="jsp" value="926" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="32" />
           <entry key="JAVA" value="198" />
-          <entry key="JSP" value="878" />
+          <entry key="JSP" value="926" />
           <entry key="JavaScript" value="15" />
         </counts>
       </usages-collector>
@@ -73,15 +66,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,7 +77,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/postadv.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -105,15 +93,6 @@
                 <element signature="n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -145,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/manage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="463" column="37" selection-start-line="463" selection-start-column="37" selection-end-line="463" selection-end-column="37" />
+            <state relative-caret-position="120">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding>
                 <element signature="n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -162,10 +141,30 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/historypost.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/404.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300" />
+            <state relative-caret-position="90">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/postdec.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -195,13 +194,17 @@
         <option value="$PROJECT_DIR$/src/main/webapp/dist/js/locales/bootstrap-datetimepicker.zh-CN.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/dist/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/dist/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/userpage/manage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/common/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/test.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/userpage/include.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/userpage/join.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/404.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/userpage/postdec.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/userpage/postadv.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/userpage/manage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/userpage/historypost.jsp" />
       </list>
     </option>
   </component>
@@ -360,7 +363,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578232315647" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578233323550" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -757,12 +760,12 @@
       <option name="presentableId" value="Default" />
       <updated>1577887742272</updated>
       <workItem from="1577887744536" duration="5691000" />
-      <workItem from="1577966152532" duration="11991000" />
+      <workItem from="1577966152532" duration="12524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17682000" />
+    <option name="totallyTimeSpent" value="18215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -953,20 +956,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/404.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-499">
           <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/postadv.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/join.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -979,10 +974,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/404.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/postdec.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/postadv.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="463" column="37" selection-start-line="463" selection-start-column="37" selection-end-line="463" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
             <element signature="n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -991,6 +1007,13 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/userpage/historypost.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
