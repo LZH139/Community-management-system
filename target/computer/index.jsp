@@ -10,7 +10,7 @@
     <title>首页</title>
     <link rel="stylesheet" href="dist/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="dist/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="dist/css/stisla.css">
 </head>
 

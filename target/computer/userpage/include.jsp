@@ -36,7 +36,7 @@
     <div class="main-sidebar">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <a href="../index.jsp">Stisla Lite</a>
+                <a href="../index.jsp">COMPUTER</a>
             </div>
             <div class="sidebar-user">
                 <div class="sidebar-user-picture">

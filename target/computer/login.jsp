@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
-    <title>Examples &rsaquo; Login &mdash; Stisla</title>
+    <title>login</title>
 
     <link rel="stylesheet" href="dist/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/modules/ionicons/css/ionicons.min.css">
@@ -69,11 +69,6 @@
                                 </form>
                             </div>
                         </div>
-                        <!--
-            <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="templates/register.html">Create One</a>
-            </div>
--->
                     </div>
                 </div>
             </div>

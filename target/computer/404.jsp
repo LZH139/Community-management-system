@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
-    <title>Examples &rsaquo; 404 &mdash; Stisla</title>
+    <title>404</title>
 
     <link rel="stylesheet" href="./dist/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/modules/ionicons/css/ionicons.min.css">
@@ -22,11 +22,11 @@
                     <div class="page-inner">
                         <h1>404</h1>
                         <div class="page-description">
-                            The page you were looking for could not be found.
+                            页面好像走丢了...
                         </div>
                         <div class="page-search">
                             <div class="mt-3">
-                                <a href="index.jsp">Back to Home</a>
+                                <a href="index.jsp">返回首页</a>
                             </div>
                         </div>
                     </div>
