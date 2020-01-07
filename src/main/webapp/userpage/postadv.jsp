@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../dist/css/demo.css">
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
-
 <body>
     <div id="app">
         <jsp:include page="include.jsp"/>

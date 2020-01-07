@@ -81,7 +81,7 @@
                                         <li class="media">
                                             <img class="mr-3 rounded-circle" width="50" src="../dist/img/avatar/avatar-1.jpeg" alt="avatar">
                                             <div class="media-body">
-                                                <div class="float-right"><small>10m</small></div>
+
                                                 <div class="media-title">编设部</div>
                                                 <small>xxxxx部门简介</small>
                                             </div>
@@ -89,7 +89,7 @@
                                         <li class="media">
                                             <img class="mr-3 rounded-circle" width="50" src="../dist/img/avatar/avatar-1.jpeg" alt="avatar">
                                             <div class="media-body">
-                                                <div class="float-right"><small>10m</small></div>
+
                                                 <div class="media-title">硬件部</div>
                                                 <small>xxxxx部门简介</small>
                                             </div>
@@ -97,7 +97,7 @@
                                         <li class="media">
                                             <img class="mr-3 rounded-circle" width="50" src="../dist/img/avatar/avatar-1.jpeg" alt="avatar">
                                             <div class="media-body">
-                                                <div class="float-right"><small>10m</small></div>
+
                                                 <div class="media-title">软件部</div>
                                                 <small>xxxxx部门简介</small>
                                             </div>
@@ -105,7 +105,7 @@
                                         <li class="media">
                                             <img class="mr-3 rounded-circle" width="50" src="../dist/img/avatar/avatar-1.jpeg" alt="avatar">
                                             <div class="media-body">
-                                                <div class="float-right"><small>10m</small></div>
+
                                                 <div class="media-title">秘书部</div>
                                                 <small>xxxxx部门简介</small>
                                             </div>
@@ -113,9 +113,9 @@
                                         <li class="media">
                                             <img class="mr-3 rounded-circle" width="50" src="../dist/img/avatar/avatar-1.jpeg" alt="avatar">
                                             <div class="media-body">
-                                                <div class="float-right"><small>10m</small></div>
+
                                                 <div class="media-title">外联部</div>
-                                                <small>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</small>
+                                                <small>xxxxx部门简介</small>
                                             </div>
                                         </li>
                                     </ul>
