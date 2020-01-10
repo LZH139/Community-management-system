@@ -34,12 +34,9 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label>姓名</label>
+                                            <label>问题标题</label>
                                             <input type="text" name="title" class="form-control" required>
-                                            <label>电话</label>
-                                            <input type="text" name="title" class="form-control" required>
-                                            <label>微信号</label>
-                                            <input type="text" name="title" class="form-control" required>
+
                                             <div class="invalid-feedback">
                                                 请输入内容
                                             </div>

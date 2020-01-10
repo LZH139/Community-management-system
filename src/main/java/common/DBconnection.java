@@ -1,5 +1,9 @@
 package common;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,19 +12,23 @@ public class DBconnection {
 
     public Connection getConnection(){
 
-        Connection conn = null;
-
-        String url = "jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT";
-
-        String user = "root";
-        String password = "13326561762";
+        Context initContext;
+        Context envContext;
+        Connection con = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url,user,password);
-        }catch (ClassNotFoundException | SQLException e) {
+            initContext = new InitialContext();
+            envContext = (Context) initContext.lookup("java:/comp/env");
+            DataSource ds = (DataSource) envContext.lookup("jdbc/community");
+            con = ds.getConnection();
+        } catch (NamingException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return conn;
+
+        return con;
 
     }
 
