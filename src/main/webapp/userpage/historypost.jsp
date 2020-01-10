@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +18,10 @@
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
 
-<body>
+<body onload="queryServer()">
+
     <div id="app">
-        
+
         <jsp:include page="include.jsp"/>
             <div class="main-content">
                 <section class="section">
@@ -42,12 +44,14 @@
                                                         <label for="checkbox-all" class="custom-control-label"></label>
                                                     </div>
                                                 </th>
-                                                <th>Task Name</th>
-                                                <th>Progress</th>
-                                                <th>Members</th>
-                                                <th>Due Date</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th>问题标题</th>
+                                                <th>进程</th>
+                                                <th>成员</th>
+                                                <th>提交时间</th>
+                                                <th>转台</th>
+                                                <th>细节</th>
+                                                <shiro:principal/>
+
                                             </tr>
                                             <tr>
                                                 <td width="40">
@@ -71,78 +75,54 @@
                                                 </td>
                                                 <td><a href="#" class="btn btn-action btn-secondary">Detail</a></td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                                                        <label for="checkbox-2" class="custom-control-label"></label>
-                                                    </div>
-                                                </td>
-                                                <td>Redesign homepage</td>
-                                                <td class="align-middle">
-                                                    <div class="progress" style="height: 4px;" data-toggle="tooltip" title="0%">
-                                                        <div class="progress-bar" style="width: 0;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <img alt="image" src="../dist/img/avatar/avatar-1.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Nur Alpiana">
-                                                    <img alt="image" src="../dist/img/avatar/avatar-3.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Hariono Yusup">
-                                                    <img alt="image" src="../dist/img/avatar/avatar-4.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Bagus Dwi Cahya">
-                                                </td>
-                                                <td>2018-04-10</td>
-                                                <td>
-                                                    <div class="badge badge-info">Todo</div>
-                                                </td>
-                                                <td><a href="#" class="btn btn-action btn-secondary">Detail</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-3">
-                                                        <label for="checkbox-3" class="custom-control-label"></label>
-                                                    </div>
-                                                </td>
-                                                <td>Backup database</td>
-                                                <td class="align-middle">
-                                                    <div class="progress" style="height: 4px;" data-toggle="tooltip" title="70%">
-                                                        <div class="progress-bar bg-warning" style="width: 70%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <img alt="image" src="../dist/img/avatar/avatar-1.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Rizal Fakhri">
-                                                    <img alt="image" src="../dist/img/avatar/avatar-2.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Hasan Basri">
-                                                </td>
-                                                <td>2018-01-29</td>
-                                                <td>
-                                                    <div class="badge badge-warning">In Progress</div>
-                                                </td>
-                                                <td><a href="#" class="btn btn-action btn-secondary">Detail</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-4">
-                                                        <label for="checkbox-4" class="custom-control-label"></label>
-                                                    </div>
-                                                </td>
-                                                <td>Input data</td>
-                                                <td class="align-middle">
-                                                    <div class="progress" style="height: 4px;" data-toggle="tooltip" title="100%">
-                                                        <div class="progress-bar bg-success" style="width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <img alt="image" src="../dist/img/avatar/avatar-2.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Rizal Fakhri">
-                                                    <img alt="image" src="../dist/img/avatar/avatar-5.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Isnap Kiswandi">
-                                                    <img alt="image" src="../dist/img/avatar/avatar-4.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Yudi Nawawi">
-                                                    <img alt="image" src="../dist/img/avatar/avatar-1.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Khaerul Anwar">
-                                                </td>
-                                                <td>2018-01-16</td>
-                                                <td>
-                                                    <div class="badge badge-success">Completed</div>
-                                                </td>
-                                                <td><a href="#" class="btn btn-action btn-secondary">Detail</a></td>
-                                            </tr>
+                                            <%--<tr>--%>
+                                                <%--<td>--%>
+                                                    <%--<div class="custom-checkbox custom-control">--%>
+                                                        <%--<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">--%>
+                                                        <%--<label for="checkbox-2" class="custom-control-label"></label>--%>
+                                                    <%--</div>--%>
+                                                <%--</td>--%>
+                                                <%--<td>Redesign homepage</td>--%>
+                                                <%--<td class="align-middle">--%>
+                                                    <%--<div class="progress" style="height: 4px;" data-toggle="tooltip" title="0%">--%>
+                                                        <%--<div class="progress-bar" style="width: 0;"></div>--%>
+                                                    <%--</div>--%>
+                                                <%--</td>--%>
+                                                <%--<td>--%>
+                                                    <%--<img alt="image" src="../dist/img/avatar/avatar-1.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Nur Alpiana">--%>
+                                                    <%--<img alt="image" src="../dist/img/avatar/avatar-3.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Hariono Yusup">--%>
+                                                    <%--<img alt="image" src="../dist/img/avatar/avatar-4.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Bagus Dwi Cahya">--%>
+                                                <%--</td>--%>
+                                                <%--<td>2018-04-10</td>--%>
+                                                <%--<td>--%>
+                                                    <%--<div class="badge badge-info">Todo</div>--%>
+                                                <%--</td>--%>
+                                                <%--<td><a href="#" class="btn btn-action btn-secondary">Detail</a></td>--%>
+                                            <%--</tr>--%>
+                                            <%--<tr>--%>
+                                                <%--<td>--%>
+                                                    <%--<div class="custom-checkbox custom-control">--%>
+                                                        <%--<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-3">--%>
+                                                        <%--<label for="checkbox-3" class="custom-control-label"></label>--%>
+                                                    <%--</div>--%>
+                                                <%--</td>--%>
+                                                <%--<td>Backup database</td>--%>
+                                                <%--<td class="align-middle">--%>
+                                                    <%--<div class="progress" style="height: 4px;" data-toggle="tooltip" title="70%">--%>
+                                                        <%--<div class="progress-bar bg-warning" style="width: 70%;"></div>--%>
+                                                    <%--</div>--%>
+                                                <%--</td>--%>
+                                                <%--<td>--%>
+                                                    <%--<img alt="image" src="../dist/img/avatar/avatar-1.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Rizal Fakhri">--%>
+                                                    <%--<img alt="image" src="../dist/img/avatar/avatar-2.jpeg" class="rounded-circle" width="35" data-toggle="title" title="Hasan Basri">--%>
+                                                <%--</td>--%>
+                                                <%--<td>2018-01-29</td>--%>
+                                                <%--<td>--%>
+                                                    <%--<div class="badge badge-warning">In Progress</div>--%>
+                                                <%--</td>--%>
+                                                <%--<td><a href="#" class="btn btn-action btn-secondary">Detail</a></td>--%>
+                                            <%--</tr>--%>
+
                                         </table>
                                     </div>
 
@@ -240,6 +220,35 @@
             }
 
         }
+        function queryServer(){
+            console.log()
+
+
+
+            // $.ajax({
+            //     type: "POST",
+            //     url: "/QueryHistory",
+            //     data: {
+            //         name: $("#staffName").val(),
+            //         sex: $("#staffSex").val(),
+            //     },
+            //     dataType: "json",
+            //     success: function(data){
+            //         if (data.success) {
+            //             $("#createResult").html(data.msg);
+            //         } else {
+            //             $("#createResult").html("出现错误：" + data.msg);
+            //         }
+            //     },
+            //     error: function(jqXHR){
+            //         alert("发生错误：" + jqXHR.status);
+            //     },
+            // });
+
+        }
+
+
+
     </script>
     <script src="../dist/js/scripts.js"></script>
     <script src="../dist/js/custom.js"></script>

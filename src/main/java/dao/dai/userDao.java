@@ -1,15 +1,19 @@
 package dao.dai;
 
 
+import dto.User;
+
 import java.util.Set;
 
 public interface userDao {
 
-    String getPassword(String username);
+    String getPassword(String account);
 
-    Set<String> listRoles(String userName);
+    Set<String> listRoles(String account);
 
-    Set<String> listPermissions(String userName);
+    Set<String> listPermissions(String account);
+
+    User getUser(String account);
 
 
 

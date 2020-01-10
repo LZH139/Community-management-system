@@ -18,7 +18,7 @@ import java.io.IOException;
 public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("account");
+        String account = request.getParameter("account");
         String password = request.getParameter("password");
 
         // 1,创建SecurityManager工厂来读取相应的配置文件
@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
         // 4,SecurityUtils获取Subject主体
         Subject subject = SecurityUtils.getSubject();
         // 5,假如登录的用户是name和password,这个地方的name和password表示用户登录时输入的信息
-        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+        UsernamePasswordToken token = new UsernamePasswordToken(account, password);
         try {
             // 6,进行用户身份验证
             subject.login(token);
