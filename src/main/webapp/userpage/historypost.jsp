@@ -209,7 +209,7 @@
             for(var i=0;i<dataOfCurrentPage.length;i++){
                 var newTr = document.createElement('tr');
                 //TO-DO
-                
+
             }
 
             console.log($("table"));
