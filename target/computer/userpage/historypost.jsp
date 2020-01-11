@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
 
-<body onload="queryServer()">
+<body onload="queryServer('<shiro:principal type='dto.User' property='uid'/>')">
 
     <div id="app">
 
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-striped">
+                                        <table class="table table-striped" id="table">
                                             <tr>
                                                 <th class="text-center">
                                                     <div class="custom-checkbox custom-control">
@@ -50,7 +50,7 @@
                                                 <th>提交时间</th>
                                                 <th>转台</th>
                                                 <th>细节</th>
-                                                <shiro:principal/>
+
 
                                             </tr>
                                             <tr>
@@ -173,79 +173,72 @@
     <script src="../dist/modules/summernote/summernote-lite.js"></script>
 
     <script>
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                datasets: [{
-                    label: 'Statistics',
-                    data: [460, 458, 330, 502, 430, 610, 488],
-                    borderWidth: 2,
-                    backgroundColor: '#0062cc',
-                    borderColor: '#0062cc',
-                    borderWidth: 2.5,
-                    pointBackgroundColor: '#ffffff',
-                    pointRadius: 4
-                }]
-            },
-            options: {
-                legend: {
-                    display: false
-                },
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            stepSize: 150
-                        }
-                    }],
-                    xAxes: [{
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                },
-            }
-        });
+        var data;
+        var pageSize=5;
+        var currentPage=1;
+        var totalPage;
 
-        function change(e) {
-            if (e.classList[1] == "btn-outline-primary") {
-                e.classList.remove("btn-outline-primary")
-                e.classList.add("btn-primary")
 
-            } else {
-                e.classList.remove("btn-primary")
-                e.classList.add("btn-outline-primary")
-            }
+        function queryServer(account){
+
+            $.ajax({
+                url: "/QueryHistory", //请求的url地址
+                dataType: "json", //返回格式为json
+                async: true, //使用异步请求进行通信
+                data:{
+                    "account":account
+                },
+                timeout: 5000,
+                type: "post", //请求方式
+                success: function(req) {
+                    data = req;
+                    InitializesPaging();
+                },
+                error: function(jqXHR){
+                    alert("发生错误：" + jqXHR.status);
+                },
+            });
+
+
 
         }
-        function queryServer(){
-            console.log()
 
 
 
-            // $.ajax({
-            //     type: "POST",
-            //     url: "/QueryHistory",
-            //     data: {
-            //         name: $("#staffName").val(),
-            //         sex: $("#staffSex").val(),
-            //     },
-            //     dataType: "json",
-            //     success: function(data){
-            //         if (data.success) {
-            //             $("#createResult").html(data.msg);
-            //         } else {
-            //             $("#createResult").html("出现错误：" + data.msg);
-            //         }
-            //     },
-            //     error: function(jqXHR){
-            //         alert("发生错误：" + jqXHR.status);
-            //     },
-            // });
+        function showCurrentData(dataOfCurrentPage) {
+            for(var i=0;i<dataOfCurrentPage.length;i++){
+                var newTr = document.createElement('tr');
+                //TO-DO
+                
+            }
+
+            console.log($("table"));
+
 
         }
+
+        function InitializesPaging(){
+            totalPage = Math.ceil(data.length / pageSize);
+            currentPage = 1;
+            var dataOfCurrentPage = getDataOfCurrentPage();
+
+            showCurrentData(dataOfCurrentPage);
+
+        }
+
+        function getDataOfCurrentPage() {
+            var dataEnd = currentPage * pageSize;
+            var dataStart = (currentPage - 1)*pageSize;
+            if (dataEnd > data.length){
+                dataEnd = data.length;
+            }
+            console.log(dataStart);
+            console.log(dataEnd);
+
+            return data.slice(dataStart,dataEnd);
+        }
+
+
 
 
 

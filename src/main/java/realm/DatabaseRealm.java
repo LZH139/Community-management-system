@@ -16,7 +16,9 @@ public class DatabaseRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         //能进入到这里，表示账号已经通过验证了
-        String account =(String) principalCollection.getPrimaryPrincipal();
+        User user = (User) principalCollection.getPrimaryPrincipal();
+        String account =user.getMail();
+
         //通过DAO获取角色和权限
         Set<String> permissions = new userDaoImpl().listPermissions(account);
         Set<String> roles = new userDaoImpl().listRoles(account);
@@ -45,6 +47,7 @@ public class DatabaseRealm extends AuthorizingRealm {
         }
 
         User user = new userDaoImpl().getUser(account);
+
 
         //认证信息里存放账号密码, getName() 是当前Realm的继承方法,通常返回当前类名 :databaseRealm
         SimpleAuthenticationInfo a = new SimpleAuthenticationInfo(user,password,getName());

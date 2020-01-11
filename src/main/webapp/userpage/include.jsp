@@ -21,7 +21,7 @@
 
             <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                 <i class="ion ion-android-person d-lg-none"></i>
-                <div class="d-sm-none d-lg-inline-block">Hi, <shiro:principal/></div>
+                <div class="d-sm-none d-lg-inline-block">Hi, <shiro:principal type="dto.User" property="name"/></div>
             </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <!--
@@ -46,7 +46,7 @@
                     <img alt="image" src="../dist/img/avatar/avatar-1.jpeg">
                 </div>
                 <div class="sidebar-user-details">
-                    <div class="user-name"><shiro:principal/></div>
+                    <div class="user-name"><shiro:principal type="dto.User" property="name"/></div>
                     <div class="user-role">
                         <shiro:hasRole name="admin">
                             admin
